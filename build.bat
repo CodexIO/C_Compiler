@@ -1,8 +1,8 @@
 @echo off
 
-set SRC=..\src\
+pushd src
 
-IF NOT EXIST ..\build mkdir ..\build
-pushd ..\build
+cl /Fe..\compiler.exe *.cpp
 
-cl /ZI %SRC%main.cpp %SRC%Lexer.cpp %SRC%Token.cpp
+del *.obj
+pushd ..

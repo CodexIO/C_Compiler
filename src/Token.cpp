@@ -8,6 +8,5 @@
  
  Token::~Token()
  {
-     printf("Freeing %s\n", tk_string);
      free(tk_string);
  }
